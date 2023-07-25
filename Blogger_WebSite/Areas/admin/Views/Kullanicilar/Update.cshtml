@@ -1,0 +1,28 @@
+﻿@{
+    Layout = "/Areas/admin/Views/_Shared/_LayoutAdmin.cshtml";
+    ViewBag.Title = "Kullanıcı Yönetimi";
+}
+
+<div class="col-md-12" style="margin-top:25px;">
+    <div class="row">
+        <a href="/admin/Kullanicilar/" class="btn btn-primary" style="margin-top:15px;margin-bottom:15px;">Geri Git </a>
+        <form action="/admin/Kullanicilar/Update" method="post">
+
+            <input type="text" name="NameSurName" value="@Model.NameSurName" class="form-control" style="margin-bottom:15px;margin-top:15px;" />
+            <input type="text" name="Eposta" value="@Model.Eposta" class="form-control" style="margin-bottom:15px;margin-top:15px;" />
+            <input type="text" name="Phone" value="@Model.Phone" class="form-control" style="margin-bottom:15px;margin-top:15px;" />
+
+            <select name="Roles" class="form-control" style="margin-bottom:15px;margin-top:15px;">
+                <option value="admin">Admin</option>
+                <option value="admin">Bloger</option>
+            </select>
+
+            <button type="submit" class="btn btn-primary" style="margin-bottom:15px;margin-top:15px;">Kaydet</button>
+
+        </form>
+        @if (ViewBag.Message != null)
+        {
+            <div class="alert alert-dark">@ViewBag.Mesaj</div>
+        }
+    </div>
+</div>

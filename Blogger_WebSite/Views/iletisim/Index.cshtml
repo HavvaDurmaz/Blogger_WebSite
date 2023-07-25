@@ -1,0 +1,34 @@
+﻿@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "iletisim";
+}
+
+<form action="/iletisim" method="post">
+<div class="RightColumn">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-12 iletisimdiv">İLETİŞİM FORMU</div>
+
+            <div class="col-md-12">
+                <div class="row">
+                    
+                        
+                    <div class="col-md-6 FormInput"><input type="text" name="AdSoyad" placeholder="Adınız Soyadınız" class="form-control" /> </div>
+                    <div class="col-md-6 FormInput"><input type="text" name="Email" placeholder="Email Adresiniz" class="form-control" /> </div>
+                    <div class="col-md-6 FormInput"><input type="text" name="Telefon" placeholder="Telefon Numaranız" class="form-control" /> </div>
+                    <div class="col-md-6 FormInput"><input type="text" name="Meslek" placeholder="Mesleginiz" class="form-control" /> </div>
+                    <div class="col-md-12 FormInput"><textarea type="text" name="Mesaj" placeholder="Mesajınız : " class="form-control" style="height:250px;"></textarea></div>
+                    <div class="col-md-12 botton"><button type="submit" class="form-control btn btn-primary">Formu Gönder</button></div>
+                    
+                    
+                    
+                    
+                </div>
+            </div>
+
+
+
+       </div>
+    </div>
+ </div>
+</form>

@@ -1,0 +1,38 @@
+﻿@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Anasayfa";
+}
+
+
+
+<div class="RightColumn">
+
+    <div class="col-md-12">
+        <div class="row">
+
+
+            @foreach (var item in Model)
+            {
+                <div class="col-md-4">
+                    <div class="col-md-12 Makaleler">
+                        <div class="row">
+                            <a href="/Blog/Detay/@item.id">
+                                <img src="/images/@item.Images" width="100%" />
+                                <div class="Kategori">@item.Categories.CategoryName</div>
+                                <div class="Baslik">@item.BlogName</div>
+                                <div class="Aciklama">@(item.Explanation.Length > 30 ? item.Explanation.Substring(0, 30) : item.Explanation)</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            }
+
+
+
+        </div>
+    </div>
+
+
+
+
+</div>

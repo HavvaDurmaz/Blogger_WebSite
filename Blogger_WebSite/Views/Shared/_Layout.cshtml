@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/jquery.min.js"></script>
+</head>
+<body>
+    <div oncancel="container-fluid">
+        <div class="row">   
+            <div class="LeftColumn">
+                <div class="ImageLogo"></div>
+
+                <nav>
+                    <ul>
+                        <li><a href="/">Anasayfa</a></li>
+                        <li><a href="/Kategoriler">Kategoriler</a></li>
+                        <li><a href="#">Hakkımızda</a></li>
+                        <li><a href="/Projeler">Projelerim</a></li>
+                        <li><a href="/iletisim">İletişim</a></li>
+                    </ul>
+                </nav>
+            </div>
+            @RenderBody()
+        </div>
+    </div>
+</body>
+</html>

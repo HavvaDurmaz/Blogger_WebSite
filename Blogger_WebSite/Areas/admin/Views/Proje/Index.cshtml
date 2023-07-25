@@ -1,0 +1,31 @@
+﻿@{
+    Layout = "/Areas/admin/Views/_Shared/_LayoutAdmin.cshtml";
+    ViewBag.Title = "Proje Yönetimi";
+}
+<div class="col-md-12" style="margin-top:25px;">
+    <div class="row">
+        <a href="/admin/Proje/Insert" class="btn btn-primary" style="margin-top:15px;margin-bottom:15px;">Yeni Ekle</a>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <td>Id</td>
+                    <td>Proje Adı</td>
+                    <td>İşlemler</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.id</td>
+                        <td>@item.ProjectName</td>
+                        <td>
+                            <a href="/admin/Proje/Update/@item.id" class="btn btn-primary">Guncelle</a>
+                            <a href="/admin/Proje/delete/@item.id" class="btn btn-danger">Sil</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

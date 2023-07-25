@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Giriş Ekranı</title>
+    <script src="~/js/bootstrap.min.js"></script>
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3"></div>
+
+            <div class="col-md-6" style="margin-top:15%; border:solid 0.3mm #f2f2f2">
+                <form action="/admin/login/Dogrulama" method="post">
+                    <input type="text" name="UserDogrulama" class="form-control" style="margin-top:15px;margin-bottom:15px;" placeholder="Doğrulama Kodu" />
+                    <input type="text" name="Email" class="form-control" style="margin-top: 15px; margin-bottom: 15px;" hidden value="@TempData["GirisEmail"]" />
+                    <input type="text" name="SystemDogrulama" class="form-control" style="margin-top:15px;margin-bottom:15px;" hidden value="@TempData["GirisDogrulama"]" />
+                    <button type="submit" class="btn btn-success" style="margin-bottom:25px;"> Doğrula</button>
+                </form>
+            </div>
+
+
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+</body>
+</html>

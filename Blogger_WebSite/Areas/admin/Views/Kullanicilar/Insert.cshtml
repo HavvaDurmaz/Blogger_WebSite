@@ -1,0 +1,27 @@
+﻿@{
+    Layout = "/Areas/admin/Views/_Shared/_LayoutAdmin.cshtml";
+    ViewBag.Title = "Proje Yönetimi";
+}
+<div class="col-md-12" style="margin-top:25px;">
+    <div class="row">
+        <a href="/admin/Proje" class="btn btn-primary" style="margin-top:15px;margin-bottom:15px;">Geri Git</a>
+
+
+        <form action="/admin/Proje/Insert" method="post" enctype="multipart/form-data">
+
+            <input type="file" class="form-control" style="margin-top:15px;margin-bottom:15px;" name="resim" />
+
+            <input type="text" class="form-control" style="margin-top:15px;margin-bottom:15px;" name="ProjectName" placeholder="Proje Adı" />
+            <input type="text" class="form-control" style="margin-top:15px;margin-bottom:15px;" name="ProjectURL" placeholder="Proje Adresi" />
+
+            <button type="submit" class="btn btn-primary"> Kaydet</button>
+
+        </form>
+
+        @if (ViewBag.Message != null)
+        {
+            <div class="alert alert-dark">@ViewBag.Message</div>
+        }
+
+    </div>
+</div>

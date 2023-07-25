@@ -1,0 +1,33 @@
+﻿@{
+    Layout = "/Areas/admin/Views/_Shared/_LayoutAdmin.cshtml";
+    ViewBag.Title = "İletişim Formu Yönetimi";
+}
+
+<div class="col-md-12" style="margin-top:25px;">
+    <div class="row">
+
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <td>Ad Soyad</td>
+                    <td>Email</td>
+                    <td>Telefon</td>
+                    <td>Meslek</td>
+                    <td>Mesaj</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var item in Model)
+                {
+                    <tr>
+                        <td>@item.AdSoyad</td>
+                        <td>@item.Email</td>
+                        <td>@item.Telefon</td>
+                        <td>@item.Meslek</td>
+                        <td>@item.Mesaj</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+   </div>
+</div>

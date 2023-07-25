@@ -1,0 +1,33 @@
+﻿@{
+    Layout = "/Areas/admin/Views/_Shared/_LayoutAdmin.cshtml";
+    ViewBag.Title = "Kategori Yönetimi";
+}
+
+<div class="col-md-12" style="margin-top:25px;">
+    <div class="row">
+        <a href="/admin/Kategori/Insert" class="btn btn-primary" style="margin-top:15px;">Yeni Ekle </a>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <td>Id</td>
+                    <td>Kategori</td>
+                    <td>İşlemler</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var item in Model)
+                {
+                     <tr>
+                    <td>@item.id</td>
+                    <td>@item.CategoryName</td>
+                    <td>
+                        <a href="/admin/Kategori/Update/@item.id" class="btn btn-primary">Düzenle</a>
+                        <a href="/admin/Kategori/Delete/@item.id" class="btn btn-danger">Sil</a>
+                    </td>
+                </tr>
+                }
+               
+            </tbody>
+        </table>
+    </div>
+</div>
